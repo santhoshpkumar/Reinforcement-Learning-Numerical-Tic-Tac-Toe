@@ -143,15 +143,21 @@ class TicTacToe:
                 else:
                     move = self.player2.epslion_greedy(self.board, self.possibleMoves())
 
+                # 'reward' value is binary 0 or 1 and 'done' is True if game ends (win, lose, draw) False otherwise
                 reward, done = self.step(isX, move)
 
-                if (reward == 1):  # won
+                if (reward == 1):  # won, reward 10 for the agent winning the game and -10 otherwise
                     if (isX):
                         self.player1.updateQ(10, self.board, self.possibleMoves())
                         self.player2.updateQ(-10, self.board, self.possibleMoves())
                     else:
                         self.player1.updateQ(-10, self.board, self.possibleMoves())
                         self.player2.updateQ(10, self.board, self.possibleMoves())
+                elif (done == False):  # a move was made which did not end the game yet, hence reward -1 for the move
+                    if (isX):
+                        self.player1.updateQ(-1, self.board, self.possibleMoves())
+                    # else:
+                        #self.player2.updateQ(-1, self.board, self.possibleMoves())
 
                 else: #(reward == 0):  draw
                     self.player1.updateQ(reward, self.board, self.possibleMoves())
