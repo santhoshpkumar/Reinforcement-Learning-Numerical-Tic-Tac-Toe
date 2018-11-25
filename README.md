@@ -32,4 +32,5 @@ In this episode, the **environment wins** as it is able to make 15 first (8+6+1)
 ### Steps
 
 [step 1](/images/step1.png)
+
 [step2 step 3](/images/step2.png)
