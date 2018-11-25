@@ -20,3 +20,16 @@ The other popular variant of this game is Numerical Tic-Tac-Toe. Instead of X’
 * The objective is to make 15 points in a row, column or a diagonal. The player can use others numbers in the grid to make 15.
 
 * The game terminates when any one of the players makes 15.
+
+**In this project**, we will build an RL agent that learns to play Numerical Tic-Tac-Toe with **odd numbers** (the agent will always make the first move). You need to train your agent using **Q-Learning**. The environment is playing randomly (no strategy) with the agent. If your agent wins the game, it gets 10 points, if the environment wins, the agent loses 10 points. And if the game ends in a draw, it gets 0. Also, you want the agent to win in lesser number of moves, so for each move, it gets a -1 point.
+
+Following is a sample episode for your reference:
+
+[sampel episode](/images/sample.png)
+
+In this episode, the **environment wins** as it is able to make 15 first (8+6+1).  After the agent places 1 in one of the grids, the environment rewards it (with a negative reward of -1) and makes a next move of placing 8 in one of the remaining cells.
+
+### Steps
+
+[step 1](/images/step1.png)
+[step2 step 3](/images/step2.png)
