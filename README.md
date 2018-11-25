@@ -25,11 +25,13 @@ The other popular variant of this game is Numerical Tic-Tac-Toe. Instead of X’
 
 Following is a sample episode for your reference:
 
+
 ![sampel episode](/images/sample.png)
+
 
 In this episode, the **environment wins** as it is able to make 15 first (8+6+1).  After the agent places 1 in one of the grids, the environment rewards it (with a negative reward of -1) and makes a next move of placing 8 in one of the remaining cells.
 
-### Steps
+## Steps:
 
 ![step 1](/images/step1.png)
 
